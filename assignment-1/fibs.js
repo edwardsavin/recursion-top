@@ -1,12 +1,12 @@
 function fibs(n) {
-  array = [];
+  let array = [];
   firstNumber = 1;
   secondNumber = 1;
 
   array.push(firstNumber);
   array.push(secondNumber);
 
-  if (n <= 0) {
+  if (n <= 0 || isNaN(n)) {
     return "Please enter a valid number";
   }
 
@@ -15,7 +15,7 @@ function fibs(n) {
   }
 
   if (n === 2) {
-    array = [2];
+    array = [1, 1];
   }
 
   for (let i = 3; i <= n; i++) {
@@ -28,7 +28,7 @@ function fibs(n) {
 
 console.log(fibs(-7)); // Please enter a valid number
 console.log(fibs(0)); // Please enter a valid number
-console.log(fibs(2)); // [2]
+console.log(fibs(2)); // [1, 1]
 console.log(fibs(4)); // [1, 1, 2, 3]
 console.log(fibs(7)); // [1, 1, 2, 3, 5, 8, 13]
 console.log(fibs(12)); // [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144]
